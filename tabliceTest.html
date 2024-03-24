@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // tabela ze wszystkimi państwami
+        // pierwsza kolumna false - jeżeli kraj nie został jeszcze znaleziony, true jeżeli został znaleziony
+        // pozostałe kolumny - nazwy krajów, alternatywne nazwy krajów, skróty nazw krajów (kolejność bez znaczenia)
+        let tab = [ 
+        [false, "Polska"],
+        [false, "USA", "Stany", "Stany Zjednoczone"],
+        [false, "Wielka Brytania", "UK"],
+        [false, "Francja"]
+        ];
+        
+        // let value to zmienna wpisana w pole z państwami
+        let value = "USA"
+        
+
+        // pętla sprawdzająca czy dany kraj znajduje się na liście i czy został już odkryty
+        // jeżeli kraj zostanie odkryty wartość pierwszego elementu tablicy zmienia sie z false na true, a pętla się zatrzymuje
+        for(let i = 0; i < tab.length; i++){
+            for(let j = 1; j < tab[i].length; j++){
+                console.log(i + " " +  j + " " + tab[i][j])
+                if (value == tab[i][j] && tab[i][0] == false){
+                    tab[i][0] = true;
+                    i = tab.length-1
+                    break;
+                }
+
+            }
+        }
+
+        console.log("BREAK------------------")
+
+        for(let t of tab){
+            for(let y of t){
+                console.log(y)
+            }
+        }
+
+        console.log("BREAK------------------")
+
+
+
+        console.log(tab[1].length);
+
+        
+
+    </script>
+</body>
+</html>

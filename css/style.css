@@ -1,0 +1,493 @@
+:root{
+    background-color: rgb(230, 241, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after{
+    content: " ";
+    display: box;
+    clear: both;
+    height: 0;
+}
+
+p.points{
+    text-align: center;
+    line-height: 0;
+    font-size: 1.5rem;
+}
+
+h2.points{  
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+#reminder{
+    display: inline;
+    margin-left: 1vw;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0px 6px;
+    background-color: rgba(231, 230, 230, 0.8);
+}
+
+#pointsWindow{
+    height: 10vw;
+    border: 2px solid black;
+    border-bottom-width: 0px;
+}
+
+#scoreWindow{
+    border: 2px solid black;
+    background-color: #c8c0ff85;
+
+}
+
+#earnedPoints{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+#powerBar{
+    border-top: 2px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+}
+
+#powerBar p{
+    display: inline;
+}
+
+svg{
+    position: relative;
+    height: 100%;  
+    text-align: center;    
+}
+
+#svg-container{
+    display: flex;
+    background-color: rgba(95, 197, 255, 0.6);
+    border: 2px solid black;
+    width: 100%;
+    margin: 1% 0;
+}
+#map{
+    position:absolute;
+    display:initial; 
+}
+
+path{
+    stroke: black;
+    stroke-width: 0.4px;
+    fill:rgb(255, 255, 13);
+    stroke-dasharray:none;
+    stroke-opacity:1"
+}
+
+
+
+#labels{
+    text-align: center;
+}
+
+.wrapper{
+    width: 60%;  
+    float: left;  
+}
+
+.wrapperLeft{
+    width: 19%;
+    float: left; 
+    height: 800px;
+    margin-right: 1%;
+}
+
+.wrapperRight{
+    width: 20%;
+    float: left;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+h1{
+    text-align: center;
+}
+
+#flags{
+    display: inline-block;
+    margin-left: auto;
+    
+
+}
+
+#eng, #pl{
+    display: block;
+    width: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    margin: 1vw 1vw 1vw 1vh;
+  
+}
+
+#eng{
+    display: inline-block;
+    background-image: url("../images/uk-flag.png");  
+    
+}
+
+#pl{
+    display: inline-block;
+    background-image: url("../images/pl-flag.png");
+    
+}
+
+
+/*TABLE*/
+td, th{
+    height: 2vh;
+    width: 10vw;
+    background-color: rgba(95, 197, 255, 0.6);
+    text-align: center;
+    font-size: 0.8rem;
+}
+th{
+    background-color: aliceblue;
+    
+}
+
+tr{  
+    margin: 0px;
+    border: 2px solid black;    
+}
+
+
+
+table{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    
+     
+}
+
+#tableDiv{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#break td{
+    background-color: rgb(230, 241, 255)
+}
+#break{
+    border-width: 0px;
+}
+
+#win{
+    display: none;
+    font-size: 50px;
+    font-weight: 800;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    background: linear-gradient(#65bde6, #9198e5);
+}
+
+#clickOnMap{
+    text-align: center;
+}
+
+#foundCountries{
+    display: inline;
+}
+
+#progressBar{
+    border: 2px solid black;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    background-color: white;
+}
+
+#end{
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+input{
+    width: 20vw;
+    height: 30px;
+    font-size: 1.5rem;
+   
+    
+
+}
+
+@keyframes scale{
+    from {scale: 200% 200%;}
+    to {scale: 100%, 100%;}
+}
+
+
+
+@keyframes myAnimation {
+    from{
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    to {
+        top: 80%;
+        opacity: 0.2;
+        
+    }
+}
+
+#stopButton{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline;
+    border-radius: 50px;
+    height: 50px;
+    font-size: 1rem;
+    bottom: 50px;
+    margin-top: 1vh;
+}
+
+@media (max-width: 1200px){
+    :root{
+        font-size: 14px;
+    }
+    #eng, #pl{
+        width: 60px;
+        height: 30px;
+      
+    }
+    #progressBar{
+        height: 18px;
+        width: 100%;
+    }
+    #stopButton{
+        padding: 0px 10px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 50px;
+    }
+}
+
+
+@media (max-width: 1010px){
+    :root{
+        font-size: 12px;
+    }
+
+    #eng, #pl{
+        width: 60px;
+        height: 30px;
+      
+    }
+
+    #progressBar{
+        height: 16px;
+        width: 100%;
+    }
+
+    #stopButton{
+        padding: 0px 10px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 50px;
+    }
+
+    .wrapper{
+        width: 70%;  
+        float: left;  
+    }
+    
+    .wrapperLeft{
+        width: 19%;
+        float: left; 
+        height: 800px;
+        margin-right: 1%;
+    }
+    
+    .wrapperRight{
+        width: 9%;
+        margin-left: 1%;
+        float: left;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    #foundCountries{
+        font-size: 1.2rem;
+    }
+
+    #earnedPoints{
+        height: 50vw;
+    }
+    
+    #countryTextBox{
+        height: 20px;
+    }
+}
+
+@media (max-width: 830px){
+    :root{
+        font-size: 10px;
+    }
+    #eng, #pl{
+        width: 50px;
+        height: 25px;
+      
+    }
+    #progressBar{
+        height: 12px;
+        width: 100%;
+    }
+    #stopButton{
+        padding: 0px 10px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 50px;
+    }
+    th, td{
+        font-size: 1rem;
+    }
+    #powerBar{
+        height: 1%;
+        font-size: 1.4rem;
+    }
+    #clickOnMap{
+        font-size: 1.5rem;
+    }
+    #countryTextBox{
+        height: 16px;
+    }
+    
+}
+
+@media (max-width: 685px){
+    :root{
+        font-size: 8px;
+    }
+    #eng, #pl{
+        width: 40px;
+        height: 20px;
+      
+    }
+    #progressBar{
+        height: 10px;
+        width: 100%;
+    }
+    #stopButton{
+        padding: 0px 10px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 50px;
+    }
+    #reminder{
+        font-size: 2rem;
+        border: 1px solid black;
+
+        padding: 2px 4px;
+
+    }
+    th, td{
+        font-size: 1.3rem;
+    }
+    #countryTextBox{
+        height: 14px;
+    }
+}
+
+@media (max-width: 500px){
+    :root{
+        font-size: 6px;
+    }
+
+    #stopButton{
+        padding: 0px 3px;
+        height: 30px;
+        font-size: 1.2rem;
+        bottom: 50px;
+    }
+    #progressBar{
+        height: 12px;
+        width: 100%;
+    }
+    #foundCountries{
+        font-size: 1.6rem;
+    }
+    #reminder{
+        font-size: 1.5rem;
+    }
+
+    th, td{
+        font-size: 1.5rem;
+    }
+    
+    #countryTextBox{
+        height: 12px;
+    }
+
+
+}
+
+@media (max-width: 330px){
+    :root{
+        font-size: 4px;
+    }
+
+    #eng, #pl{
+        width: 30px;
+        height: 15px;
+      
+    }
+
+    #stopButton{
+        padding: 0px 3px;
+        height: 20px;
+        font-size: 1.2rem;
+        bottom: 50px;
+    }
+    #progressBar{
+        height: 8px;
+        width: 100%;
+    }
+    #foundCountries{
+        font-size: 1.6rem;
+    }
+
+    th, td{
+        font-size: 1.5rem;
+        
+    }
+    #countryTextBox{
+        height: 6px;
+    }
+
+
+}
+
+

@@ -1,0 +1,250 @@
+:root{
+    background-color: rgb(230, 241, 255);
+}
+
+.clearfix::after{
+    content: " ";
+    display: box;
+    clear: both;
+    height: 0;
+}
+
+p.points{
+    text-align: center;
+    line-height: 0;
+    font-size: 1.5rem;
+}
+
+h2.points{  
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+#pointsWindow{
+    height: 100px;
+    border: 2px solid black;
+    border-bottom-width: 0px;
+}
+
+#scoreWindow{
+    border: 2px solid black;
+    background-color: #c8c0ff85;
+
+}
+
+#earnedPoints{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+#powerBar{
+    border-top: 2px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+}
+
+#powerBar p{
+    display: inline;
+}
+
+svg{
+    position: relative;
+    height: 100%;  
+    text-align: center;    
+}
+
+#svg-container{
+    display: flex;
+    background-color: rgba(95, 197, 255, 0.6);
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 1%;
+}
+#map{
+    position:absolute;
+    display:initial; 
+}
+
+path{
+    stroke: black;
+    stroke-width: 0.4px;
+    fill:rgb(255, 255, 13);
+    stroke-dasharray:none;
+    stroke-opacity:1"
+}
+
+.wrapper{
+    width: 60%;  
+    float: left;  
+}
+
+#labels{
+    text-align: center;
+}
+
+.wrapperLeft{
+    width: 19%;
+    float: left; 
+    height: 800px;
+    margin-right: 1%;
+}
+
+.wrapperRight{
+    width: 20%;
+    float: left;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+h1{
+    text-align: center;
+}
+
+#flags{
+    display: inline-block;
+    margin-left: auto;
+    
+
+}
+
+#eng, #pl{
+    display: block;
+    width: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    margin: 1vw 1vw 1vw 1vh;
+  
+}
+
+#eng{
+    display: inline-block;
+    background-image: url("uk-flag.png");
+    
+    
+    
+}
+
+#pl{
+    display: inline-block;
+    background-image: url("pl-flag.png");
+    
+}
+
+
+/*TABLE*/
+td, th{
+    height: 2vh;
+    width: 10vw;
+    background-color: rgba(95, 197, 255, 0.6);
+    text-align: center;
+    font-size: 0.8rem;
+}
+th{
+    background-color: aliceblue;
+    
+}
+
+tr{  
+    margin: 0px;
+    border: 2px solid black;    
+}
+
+
+
+table{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    
+     
+}
+
+#tableDiv{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#break td{
+    background-color: white;
+}
+#break{
+    border-width: 0px;
+}
+
+#win{
+    display: none;
+    font-size: 80px;
+    font-weight: 800;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+#clickOnMap{
+    text-align: center;
+}
+
+#foundCountries{
+    display: inline;
+}
+
+#progressBar{
+    border: 2px solid black;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#end{
+    display: inline;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 1.5rem;
+    
+}
+
+label{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+input{
+    width: 20vw;
+    height: 30px;
+    font-size: 1.5rem;
+    
+    
+
+}
+
+@keyframes scale{
+    from {scale: 200% 200%;}
+    to {scale: 100%, 100%;}
+}
+
+
+
+@keyframes myAnimation {
+    from{
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    to {
+        top: 80%;
+        opacity: 0.2;
+        
+    }
+}
